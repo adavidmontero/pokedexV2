@@ -97,7 +97,7 @@
             var pokemon_name = $(e).data('pokemon');
             $.ajax({
                 url: "{{ route('ajax.pokemon_info') }}",
-                method: 'GET',
+                type: 'GET',
                 data:
                 {
                     pokemon_name: pokemon_name,
