@@ -12,7 +12,7 @@ class AjaxController extends Controller
     {
         if($request->ajax())
         {
-            $client = new Client();
+            $client = new Client(['base_uri' => 'https://pokeapi.co/']);
 
             $request = new \GuzzleHttp\Psr7\Request('GET', 'https://pokeapi.co/api/v2/pokemon/' . $request->pokemon_name);
 
