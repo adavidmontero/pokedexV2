@@ -41,7 +41,7 @@ class PageController extends Controller
         $viewModel = new PokemonsViewModel($page, $pokemons, 'index');
 
         //Enviamos a la vista todo lo que se retorne en el viewModel
-        return view('pages.index', $viewModel);
+        return view('Pages.index', $viewModel);
     }
 
     public function search(Request $request)
@@ -68,6 +68,6 @@ class PageController extends Controller
 
         $viewModel = new PokemonsViewModel(1, $results, 'search');
 
-        return view('pages.search', $viewModel, compact('name'));
+        return view('Pages.search', $viewModel, compact('name'));
     }
 }
