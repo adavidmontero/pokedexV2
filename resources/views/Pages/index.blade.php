@@ -102,7 +102,8 @@
                 {
                     pokemon_name: pokemon_name,
                 },
-                done: function(data)
+                dataType: 'json',
+                success: function(data)
                 {
                     let { image, sprites, types, height, weight, base_experience, abilities, items, stats } = data.pokemon;
                     const mainImage = document.querySelector(`#image-${pokemon_name}`);
