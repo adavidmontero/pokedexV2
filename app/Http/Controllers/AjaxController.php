@@ -23,7 +23,7 @@ class AjaxController extends Controller
             $pokemon = json_decode($promise->wait(), true);
             $viewModel = new PokemonViewModel($pokemon);
 
-            return response()->json($viewModel);
+            dd(response()->json($viewModel));
         }
     }
 }
