@@ -102,9 +102,8 @@
                 {
                     pokemon_name: pokemon_name,
                 },
-                success: function(data)
+                done: function(data)
                 {
-                    console.log(data);
                     let { image, sprites, types, height, weight, base_experience, abilities, items, stats } = data.pokemon;
                     const mainImage = document.querySelector(`#image-${pokemon_name}`);
                     const spriteB = document.querySelector(`#sprite-b-${pokemon_name}`);
@@ -166,6 +165,9 @@
                     }
                     document.querySelector(`#spinner-info-${pokemon_name}`).className = 'd-none';
                     document.querySelector(`#pokemon-info-${pokemon_name}`).className = 'd-block';
+                },
+                fail: function() {
+                    console.log('error');
                 }
             });
         }
