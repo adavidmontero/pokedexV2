@@ -68,7 +68,7 @@
         function show_pokemon(e){
             var pokemon_name = $(e).data('pokemon');
             $.ajax({
-                url: "{{ route('ajax.pokemon_info') }}",
+                url: "https://whispering-sierra-34881.herokuapp.com/pokemon_info",
                 type: 'GET',
                 data:
                 {
