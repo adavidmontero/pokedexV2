@@ -104,6 +104,7 @@
                 },
                 success: function(data)
                 {
+                    console.log(data);
                     let { image, sprites, types, height, weight, base_experience, abilities, items, stats } = data.pokemon;
                     const mainImage = document.querySelector(`#image-${pokemon_name}`);
                     const spriteB = document.querySelector(`#sprite-b-${pokemon_name}`);
